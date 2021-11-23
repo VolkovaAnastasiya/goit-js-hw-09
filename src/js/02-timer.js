@@ -11,8 +11,8 @@ const minutesRef = document.querySelector('[data-minutes]');
 const secondsRef = document.querySelector('[data-seconds]');
 const timerRef = document.querySelector('.timer');
 
-btnDateStart.disabled = true;
 let timerId = null;
+btnDateStart.disabled = true;
 
 const options = {
   enableTime: true,
@@ -28,6 +28,7 @@ const options = {
     } else {
       clearInterval(timerId);
       btnDateStart.disabled = true;
+      clearTimer();
       return alert('Please choose a date in the future');
     }
 
@@ -69,7 +70,6 @@ function clearTimer() {
   hoursRef.textContent = '00';
   minutesRef.textContent = '00';
   secondsRef.textContent = '00';
-  timerRef.textContent = 'Этот день настал)))';
 }
 
 function addLeadingZero(value) {

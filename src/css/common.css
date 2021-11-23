@@ -33,6 +33,13 @@ img {
   align-items: center;
 }
 
+.timer {
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(240, 228, 228);
+}
+
 .field {
   font-style: italic;
   font-size: 60px;
@@ -41,7 +48,7 @@ img {
 }
 
 .timerBody {
-  background-image: url(https://wallpapershome.com/images/wallpapers/ladybug-5120x2880-red-green-grass-umbrella-9967.jpg);
+  background-image: url(https://naurok-test.nyc3.cdn.digitaloceanspaces.com/11264/images/480785_1586697220.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
