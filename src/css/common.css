@@ -3,8 +3,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
@@ -15,4 +15,52 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+.switcherBtn {
+  font-family: cursive;
+  font-size: 20px;
+  width: 120px;
+  height: 60px;
+  color: indigo;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timer {
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  font-style: italic;
+  font-size: 60px;
+  font-weight: 600;
+  color: rgb(240, 228, 228);
+}
+
+.timerBody {
+  background-image: url(https://wallpapershome.com/images/wallpapers/ladybug-5120x2880-red-green-grass-umbrella-9967.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.field:not(:last-child) {
+  margin-right: 30px;
+}
+#datetime-picker {
+  height: 35px;
+  background-color: rgb(151, 156, 153);
+  border: 2px solid white;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.timer-Btn {
+  height: 35px;
+  border-radius: 3px;
+  background-color: rgb(151, 156, 153);
+  border: 2px solid white;
+  text-align: center;
 }
