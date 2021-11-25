@@ -27,7 +27,9 @@ function onSubmitcreatePromises(event) {
   const amount = Number(amountRef.value);
 
   for (let i = 1; i <= amount; i += 1) {
-    delay += step;
+    if (i !== 1) {
+      delay += step;
+    }
     createPromise(i, delay).then(fulfilled).catch(onReject).finally();
   }
 }
