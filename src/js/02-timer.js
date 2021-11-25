@@ -2,6 +2,8 @@
 import flatpickr from 'flatpickr';
 // Дополнительный импорт стилей
 import 'flatpickr/dist/flatpickr.min.css';
+
+import Notiflix from 'notiflix';
 //инициализация
 const inputDateRef = document.querySelector('input#datetime-picker');
 const btnDateStart = document.querySelector('[data-start]');
@@ -26,10 +28,11 @@ const options = {
     if (deltaTime > 0) {
       btnDateStart.disabled = false;
     } else {
-      clearInterval(timerId);
       btnDateStart.disabled = true;
       clearTimer();
-      return alert('Please choose a date in the future');
+      clearInterval(timerId);
+      Notiflix.Notify.failure('Please choose a date in the future');
+      return;
     }
 
     const timer = {
@@ -46,7 +49,7 @@ const options = {
 
             if (deltaTime <= 0) {
               clearInterval(timerId);
-              clearTimer();
+              endTimer();
               return;
             }
           }, 1000);
@@ -70,6 +73,10 @@ function clearTimer() {
   hoursRef.textContent = '00';
   minutesRef.textContent = '00';
   secondsRef.textContent = '00';
+}
+
+function endTimer() {
+  timerRef.textContent = 'Время вышло!!!!!';
 }
 
 function addLeadingZero(value) {
